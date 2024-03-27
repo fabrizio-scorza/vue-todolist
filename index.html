@@ -24,8 +24,9 @@
                         <div class="card__body">
                             <ul class="list">
                                 <!--ciclo for che scorre l'array di task e stampa il valore della proprietà text con if che controlla se la proprietà done è vera o falsa e in caso aggiunge la classe done-->
-                                <li class="item" v-for= "(task,i) in tasks":class="task.done === true ?'done':''">
-                                    {{ task.text}}
+                                <li class="item" v-for= "(task,i) in tasks">
+                                    <p :class="task.done === true ?'done':''">{{ task.text }}</p>
+                                    <i class="fa-solid fa-xmark" @click="removeTask(i)"></i>
                                 </li>
                             </ul>
                         </div>
@@ -33,7 +34,7 @@
                 </div>
             </main>
         </div>
-
+        <script src="https://kit.fontawesome.com/c621ff4416.js" crossorigin="anonymous"></script>
         <script src="./js/app.js"></script>
     </body>
 </html>

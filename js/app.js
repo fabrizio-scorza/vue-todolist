@@ -1,6 +1,7 @@
 const {createApp} = Vue
 
 createApp({
+    //dati di createApp
     data(){
         return{
             //array di oggetti in data 
@@ -26,6 +27,13 @@ createApp({
                     done: true,
                 },
             ]
+        }
+    },
+    //metodi di createApp
+    methods:{
+        //metodo che rimuove la task dalla lista
+        removeTask(i){
+            this.tasks.splice(i,1);
         }
     }
 }).mount('#app');
