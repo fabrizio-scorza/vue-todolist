@@ -44,6 +44,9 @@ createApp({
                 });
                 this.inputValue ='';
             }
+        },
+        invertDone(task){
+           this.done = this.tasks.map(() => task.done = !task.done )
         }
     }
 }).mount('#app');

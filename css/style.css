@@ -16,7 +16,7 @@ ul, li, menu {
 
 .container{
     margin: 0 auto;
-    max-width: 1024;
+    max-width: 980px;
 }
 
 
@@ -43,8 +43,13 @@ body{
     justify-content: center;
     padding: 40px
 }
-
+.card{
+    flex-grow:1;
+}
 .card__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 24px;
     background-color: rgb(41, 158, 255) ;
     border: 2px solid black;
@@ -55,7 +60,7 @@ body{
     border: none;
     border-radius: 4px;
     height: 32px;
-    width: 320px;
+    width: 70%;
     padding: 0 10px;
     background-color: rgba(255, 255, 255, 0.4);
     font-size: 20px;
