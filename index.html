@@ -29,7 +29,7 @@
                             <ul class="list">
                                 <!--ciclo for che scorre l'array di task e stampa il valore della proprietà text con if che controlla se la proprietà done è vera o falsa e in caso aggiunge la classe done-->
                                 <li class="item" v-for= "(task,i) in tasks">
-                                    <p @click="invertDone(task)" :class="task.done === true ?'done':''">{{ task.text }}</p>
+                                    <p @click="invertDone(task)" :class="setDone(task)">{{ task.text }}</p>
                                     <i class="fa-solid fa-xmark" @click="removeTask(i)"></i>
                                 </li>
                             </ul>

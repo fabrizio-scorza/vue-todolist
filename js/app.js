@@ -28,6 +28,7 @@ createApp({
                 },
             ],
             inputValue:'',
+            doneValue:'',
         }
     },
     //metodi di createApp
@@ -44,6 +45,10 @@ createApp({
                 });
                 this.inputValue ='';
             }
+        },
+        setDone(task){
+            doneValue = task.done === true ? 'done': '';
+            return doneValue
         },
         invertDone(task){
            this.done = this.tasks.map(() => task.done = !task.done )
