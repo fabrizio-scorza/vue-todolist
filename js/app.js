@@ -26,7 +26,8 @@ createApp({
                     text: "Sistemare l'armadio",
                     done: true,
                 },
-            ]
+            ],
+            inputValue:'',
         }
     },
     //metodi di createApp
@@ -34,6 +35,15 @@ createApp({
         //metodo che rimuove la task dalla lista
         removeTask(i){
             this.tasks.splice(i,1);
+        },
+        addTask(){
+            if(this.inputValue !== ''){
+                this.tasks.push({ 
+                    text: this.inputValue,
+                    done: false
+                });
+                this.inputValue ='';
+            }
         }
     }
 }).mount('#app');

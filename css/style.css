@@ -44,10 +44,45 @@ body{
     padding: 40px
 }
 
+.card__head{
+    padding: 24px;
+    background-color: rgb(41, 158, 255) ;
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.add__text{
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    width: 320px;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    margin-right: 20px;
+}
+input:focus-visible{
+    outline: none;
+}
+
+.btn{
+    border: none;
+    border-radius: 15px;
+    height: 24px;
+    padding: 0 12px;
+    box-shadow: 4px 2px 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
 .card__body{
     padding:24px;
-    border: 2px solid black;
-    border-radius:10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(255, 249, 83);
 }
 .item{
