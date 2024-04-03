@@ -22,14 +22,16 @@
                 <div class="container card__wrapper">
                     <div class="card">
                         <div class="card__head">
-                            <input @keydown.enter="addTask" v-model.trim="inputValue" class="add__text" type="text" placeholder="Aggiungi una nuova task alla lista">
+                            <input @keyup.enter="addTask" v-model.trim="newTaskText" class="add__text" type="text" placeholder="Aggiungi una nuova task alla lista">
                             <button @click="addTask" class="btn">Nuova</button>
                         </div>
                         <div class="card__body">
                             <ul class="list">
                                 <!--ciclo for che scorre l'array di task e stampa il valore della proprietà text con if che controlla se la proprietà done è vera o falsa e in caso aggiunge la classe done-->
                                 <li class="item" v-for= "(task,i) in tasks">
-                                    <p @click="invertDone(task)" :class="setDone(task)">{{ task.text }}</p>
+                                    <p @click="invertDone(task)" :class="setDone(task)">
+                                        {{ task.text }}
+                                    </p>
                                     <i class="fa-solid fa-xmark" @click="removeTask(i)"></i>
                                 </li>
                             </ul>

@@ -27,7 +27,7 @@ createApp({
                     done: true,
                 },
             ],
-            inputValue:'',
+            newTaskText:'',
             doneValue:'',
         }
     },
@@ -38,12 +38,12 @@ createApp({
             this.tasks.splice(i,1);
         },
         addTask(){
-            if(this.inputValue !== ''){
+            if(this.newTaskText !== ''){
                 this.tasks.push({ 
-                    text: this.inputValue,
+                    text: this.newTaskText,
                     done: false
                 });
-                this.inputValue ='';
+                this.newTaskText ='';
             }
         },
         setDone(task){
@@ -51,7 +51,7 @@ createApp({
             return doneValue
         },
         invertDone(task){
-           this.done = this.tasks.map(() => task.done = !task.done )
+        task.done = !task.done 
         }
     }
 }).mount('#app');
